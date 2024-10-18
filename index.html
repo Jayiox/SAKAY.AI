@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakay.AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="map-container">
+            <div id="map"></div>
+            <div id="search-panel">
+                <h2>Select Locations</h2>
+                    <form id="route-form">
+                        <div class="input-container">
+                        <input type="text" id="start" placeholder="Start Location" autocomplete="off" required>
+                        <ul id="start-suggestions" class="suggestions"></ul>
+                        </div>
+                        <div class="input-container">
+                        <input type="text" id="end" placeholder="End Location" autocomplete="off" required>
+                        <ul id="end-suggestions" class="suggestions"></ul>
+                    </div>
+                    <button type="submit">Find Route</button>
+                </form>
+                <div id="results"></div>
+                <div id="chatbox">
+                    <div class="chat-log" id="chat-log"></div>
+                    <form id="chat-form">
+                        <input type="text" id="chat-input" placeholder="Type your message here..." autocomplete="off" required>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src='GMAPSAPIKEY'></script>
+<script src="script.js"></script>
+</body>
+</html>

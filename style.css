@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#map-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+}
+
+#map {
+    flex: 1;
+    height: 100%;
+}
+
+#search-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 0 0 8px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 10px;
+    height: calc(100% - 40px);
+    z-index: 1000;
+}
+
+#search-panel h2 {
+    margin-top: 0;
+}
+
+#search-panel form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    position: relative;
+}
+
+#search-panel input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 16px);
+}
+
+#search-panel button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search-panel button:hover {
+    background-color: #0056b3;
+}
+
+#results {
+    margin-top: 10px;
+}
+
+#chatbox {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 5px 15px;
+    box-shadow: 0 0 10px #003cff;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 60px;
+}
+
+#chatbox input {
+    border: none;
+    background: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    border-radius: 25px;
+    align-self: flex-end;
+}
+
+.chat-log {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.chat-log div {
+    margin-bottom: 5px;
+}
+
+.suggestions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: white;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    top: 40px;
+    width: calc(100% - 20px);
+    z-index: 1001;
+}
+
+.suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #eee;
+}
